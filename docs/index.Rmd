@@ -1,0 +1,40 @@
+---
+title: "Incarceration Trends In The USA"
+author: "Dinah Bahta (dbahta2@uw.edu)"
+date: "02/25/2022"
+output: html_document
+---
+```{r setup, include=FALSE}
+
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+source("../source/analysis.R")
+```
+
+## Introduction:
+In this assignment I will be analyzing the prison/jail population rates & counts varying by race.The variables that I choose are Black prison admission rates, Black male prison population, Black female prison population, Latin female prison population, and jail admission rates. My main focus was to use these visualizations to shed light on the inequality in our institutions. There have been disproportionate incarcerations between people of color and so this data gives a glimpse of the inequality that lies in our system.  
+
+## Summary:
+For my summary report, I analyzed the Black prison admission rates in the state of Tennessee from 2006-2010. The total number of black prison admission rates throughout the years had a trend where it would increase and than decrease. For example, in **2006** (total population = `r format(black_admisson_rate)`), in **2007** (total population = `r format(black_admisson_rate2)`), in **2008** (total population = `r format(black_admisson_rate3)`), and in **2009** (total population = `r format(black_admisson_rate4)`), and lastly in **2010** (total population = `r format(black_admisson_rate5)`). This shows a fluctuation of incarcerations rates in Tennessee. It's important to analyze because it will provide greater opportunities for improving the increase in imprisonment.
+
+```{r pressure, echo=FALSE}
+plot(line_chart)
+```
+
+## First Visualization:
+In this first visualization, it includes a line chart that includes the Black male imprisonment population in New York and California. The reason I chose to focus on Black male incarceration in these two states is so I can see a comparison of who holds higher rates of Black males in prison. This is important because Black males have high rates of incarceration. As we see the numbers substantially continue to grow we need to enlighten our society on why this institutional injustice continues to occur. 
+
+```{r line, echo=FALSE}
+plot(the_chart)
+```
+
+## Second Visualization:
+In this second visualization, I made a side by side bar chart of Black female imprisonment and Latin female imprisonment. I used the data based on these different states, Alabama, California, Florida, Texas, and Washington. I chose to focus on these two variables so I can see a comparison on which race is more held to become incarcerated. What I found interesting about this data was how Latin individuals are near of becoming the majority in America, yet Black women have much higher rates of incarceration. This disproportionately is important to recognize because Black men and women are constantly being incarcerated at much higher rates than any other races. 
+
+
+```{r map, echo=FALSE}
+county_map
+```
+
+## Third Visualization:
+In this third visualization, I made a map that displays the jail admission rates in Alabama. I made a Choropleth map to see the comparison of jail admission rates between each county. What I found interesting about this data is the fluctuation between each county and how many of the counties stayed between the more blue-purple ratios. Therefore, explains that the counties have jail admission rates typically around the 0-20000. This map will also be able too help identify the counties that need more guidance and reform in their institutions so there can be a decline in the jail rates. 
